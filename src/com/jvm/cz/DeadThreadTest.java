@@ -16,6 +16,7 @@ public class DeadThreadTest {
 
     }
 
+    //虚拟机必须保证一个类的<clinit>()方法在多线程中只会被加载一次，如下代码，只会有一个线程进入DeadThread静态代码块中(clinit)方法
     static class DeadThread {
         static {
             if (true) {
